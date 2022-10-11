@@ -1,0 +1,2 @@
+# MakeSyLifeServer
+SyLifeのセットアップ
