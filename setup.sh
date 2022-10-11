@@ -14,7 +14,7 @@ git config --global user.name sknjpn
 git config --global user.email sknjpn@gmail.com
 
 # Install OpenSiv3D
-sudo apt install ninja-build libasound2-dev libavcodec-dev libavformat-dev libavutil-dev libboost-dev libcurl4-openssl-dev libgtk-3-dev libgif-dev libglu1-mesa-dev libharfbuzz-dev libmpg123-dev libopencv-dev libopus-dev libopusfile-dev libsoundtouch-dev libswresample-dev libtiff-dev libturbojpeg0-dev libvorbis-dev libwebp-dev libxft-dev uuid-dev xorg-dev gcc g++ gcc-9 g++-9 cmake -y
+#sudo apt install ninja-build libasound2-dev libavcodec-dev libavformat-dev libavutil-dev libboost-dev libcurl4-openssl-dev libgtk-3-dev libgif-dev libglu1-mesa-dev libharfbuzz-dev libmpg123-dev libopencv-dev libopus-dev libopusfile-dev libsoundtouch-dev libswresample-dev libtiff-dev libturbojpeg0-dev libvorbis-dev libwebp-dev libxft-dev uuid-dev xorg-dev gcc g++ gcc-9 g++-9 cmake -y
 sudo rm /usr/bin/gcc
 sudo rm /usr/bin/g++
 sudo ln -s /usr/bin/gcc-9 /usr/bin/gcc
@@ -44,7 +44,7 @@ pushd
 echo "source ~/emsdk/emsdk_env.sh 2> /dev/null" >> .bashrc
 
 # Install Nginx
-sudo apt install nginx certbot python3-certbot-nginx -y
+#sudo apt install nginx certbot python3-certbot-nginx -y
 sudo ufw allow "Nginx Full"
 sudo certbot --nginx -d sylife.jp
 
