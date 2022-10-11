@@ -31,6 +31,7 @@ pushd
 # Install Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
+npm install -g yarn
 
 # Install Emscripten
 git clone https://github.com/emscripten-core/emsdk.git
