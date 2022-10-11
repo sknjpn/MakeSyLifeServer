@@ -1,4 +1,5 @@
 #!/bin/bash
+CURRENT=$(cd $(dirname $0);pwd)
 cd
 
 # set mirror server
@@ -47,6 +48,8 @@ echo "source ~/emsdk/emsdk_env.sh 2> /dev/null" >> .bashrc
 #sudo apt install nginx certbot python3-certbot-nginx -y
 sudo ufw allow "Nginx Full"
 sudo certbot --nginx -d sylife.jp
+sudo cp -f $CURRENT/nginx.conf /etc/nginx/sites-available/default
+sudo systemctl restart nginx
 
 # clone SyLife
 git clone https://github.com/sknjpn/SyLife
