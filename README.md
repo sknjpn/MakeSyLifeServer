@@ -1,10 +1,10 @@
 # MakeSyLifeServer
 SyLifeのセットアップ用スクリプト
 
-
 # Env
-- Ubuntu Server 22.04
+- [ConoHa VPS](https://www.conoha.jp/vps/)
 - [sylife.jp](https://sylife.jp)
+- Ubuntu Server 22.04
 
 # Install
 - [OpenSiv3D](https://github.com/Siv3D/OpenSiv3D) v6.5.0
@@ -14,6 +14,10 @@ SyLifeのセットアップ用スクリプト
 - gcc 9 (not 11 because of OpenSiv3D version)
 
 # Usage
+before startup(will rebooting)
+`./update.sh`
+
+next
 `bash setup.sh`
 or
 `./setup.sh`
