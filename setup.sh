@@ -21,30 +21,31 @@ sudo rm /usr/bin/g++
 sudo ln -s /usr/bin/gcc-9 /usr/bin/gcc
 sudo ln -s /usr/bin/g++-9 /usr/bin/g++
 git clone https://github.com/Siv3D/OpenSiv3D
-pushd OpenSiv3D/Linux
-mkdir build
-pushd build
+cd OpenSiv3D/Linux
+mkdir build && cd build
 cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-pushd
+cd ..
 cmake --build build
 sudo cmake --install build
-pushd
 
 # Install Node
+cd
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source .bashrc
 nvm install node
 npm install -g yarn
 
 # Install Emscripten
+cd
 git clone https://github.com/emscripten-core/emsdk.git
-pushd emsdk
+cd emsdk
 git pull
 ./emsdk install latest
 ./emsdk activate latest
-pushd
 echo "source ~/emsdk/emsdk_env.sh 2> /dev/null" >> .bashrc
 
 # Install Nginx
+cd
 #sudo apt install nginx certbot python3-certbot-nginx -y
 sudo ufw allow "Nginx Full"
 sudo certbot --nginx -d sylife.jp
@@ -52,4 +53,5 @@ sudo cp -f $CURRENT/nginx.conf /etc/nginx/sites-available/default
 sudo systemctl restart nginx
 
 # clone SyLife
+cd
 git clone https://github.com/sknjpn/SyLife
